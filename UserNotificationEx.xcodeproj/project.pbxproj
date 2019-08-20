@@ -55,13 +55,66 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5C3B65D4230AF90800837027 /* Push */ = {
+		5C3B65D4230AF90800837027 /* PushService */ = {
 			isa = PBXGroup;
 			children = (
-				5CC003052304111B007C7FC3 /* AppDelegate+Push.swift */,
 				5CC0030323040E7D007C7FC3 /* PushManager.swift */,
 			);
-			path = Push;
+			path = PushService;
+			sourceTree = "<group>";
+		};
+		5CB9A08D230B822400391C63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CC002F52303A039007C7FC3 /* Assets.xcassets */,
+				5CC002FA2303A039007C7FC3 /* Info.plist */,
+				5CC0030023040B79007C7FC3 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5CB9A08E230B824600391C63 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				5CB9A090230B825E00391C63 /* Core */,
+				5C3B65D4230AF90800837027 /* PushService */,
+				5CB9A093230B82B700391C63 /* Scenes */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		5CB9A090230B825E00391C63 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5CC002EE2303A037007C7FC3 /* AppDelegate.swift */,
+				5CC003052304111B007C7FC3 /* AppDelegate+Push.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5CB9A091230B827900391C63 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5CC002F22303A037007C7FC3 /* Main.storyboard */,
+				5CC002F72303A039007C7FC3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5CB9A092230B82AC00391C63 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5CC002F02303A037007C7FC3 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5CB9A093230B82B700391C63 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5CB9A092230B82AC00391C63 /* Main */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		5CC002E22303A037007C7FC3 = {
@@ -86,14 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				5CC0030223040CA7007C7FC3 /* UserNotificationEx.entitlements */,
-				5CC002EE2303A037007C7FC3 /* AppDelegate.swift */,
-				5C3B65D4230AF90800837027 /* Push */,
-				5CC002F02303A037007C7FC3 /* ViewController.swift */,
-				5CC002F22303A037007C7FC3 /* Main.storyboard */,
-				5CC002F52303A039007C7FC3 /* Assets.xcassets */,
-				5CC002F72303A039007C7FC3 /* LaunchScreen.storyboard */,
-				5CC002FA2303A039007C7FC3 /* Info.plist */,
-				5CC0030023040B79007C7FC3 /* GoogleService-Info.plist */,
+				5CB9A08E230B824600391C63 /* Contents */,
+				5CB9A08D230B822400391C63 /* Resources */,
+				5CB9A091230B827900391C63 /* Storyboards */,
 			);
 			path = UserNotificationEx;
 			sourceTree = "<group>";
@@ -385,7 +433,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNMQE42DQF;
-				INFOPLIST_FILE = UserNotificationEx/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UserNotificationEx/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,7 +456,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNMQE42DQF;
-				INFOPLIST_FILE = UserNotificationEx/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UserNotificationEx/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

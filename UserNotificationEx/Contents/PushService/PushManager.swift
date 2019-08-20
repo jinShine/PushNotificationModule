@@ -73,7 +73,8 @@ class PushManager: NSObject {
   
   func didRegisterForRemoteNotificationsWithDeviceToken(deviceToken: Data) {
     messaging.apnsToken = deviceToken
-    print("didRegisterForRemoteNotificationsWithDeviceToken : ", deviceToken)
+    let token = deviceToken.map { String(format: "%02.2hhx", arguments: [$0]) }.joined()
+    print("device Token", token)
   }
   
   func didFailToRegisterForRemoteNotificationsWithError(error: Error) {
@@ -92,6 +93,6 @@ class PushManager: NSObject {
 //MARK: - Firebase
 extension PushManager: MessagingDelegate {
   func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-    print("didReceiveRegistrationToken : ", fcmToken)
+    print("FCM Token :", fcmToken)
   }
 }
